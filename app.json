@@ -1,14 +1,14 @@
 {
   "expo": {
     "name": "spare",
-    "description": "A very interesting project.",
+    "description": "React Native Community Shelf - Spare.",
     "slug": "spare",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/icons/iTunesArtwork@2x.png",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
