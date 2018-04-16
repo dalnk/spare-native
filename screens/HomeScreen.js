@@ -32,35 +32,20 @@ export default class HomeScreen extends React.Component {
           ref={ref => {
             this._mapView = ref;
           }}
-          style={{width: Dimensions.get('window').width, height: 600}}
+          style={{flex: 1}}
           initialRegion={REGION}
           provider={'google'}
-        />
+          showsUserLocation={true}
+        >
+          <MapView.Marker
+            key={1}
+            coordinate={{latitude: 52.36, longitude: 4.88}}
+            title={"Some Title"}
+            description={"Henlo Birb"}
+          />
+        </MapView>
       </View>
     );
-  }
-
-  _maybeRenderDevelopmentModeWarning() {
-    if (__DEV__) {
-      const learnMoreButton = (
-        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-          Learn more
-        </Text>
-      );
-
-      return (
-        <Text style={styles.developmentModeText}>
-          Development mode is enabled, your app will be slower but you can use useful development
-          tools. {learnMoreButton}
-        </Text>
-      );
-    } else {
-      return (
-        <Text style={styles.developmentModeText}>
-          You are not in development mode, your app will run at full speed.
-        </Text>
-      );
-    }
   }
 
   _handleLearnMorePress = () => {
