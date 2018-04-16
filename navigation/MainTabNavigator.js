@@ -6,7 +6,7 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import NearbyScreen from '../screens/NearbyScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 export default TabNavigator(
@@ -15,7 +15,7 @@ export default TabNavigator(
       screen: HomeScreen,
     },
     Links: {
-      screen: LinksScreen,
+      screen: NearbyScreen,
     },
     Settings: {
       screen: SettingsScreen,
@@ -53,6 +53,6 @@ export default TabNavigator(
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     animationEnabled: false,
-    swipeEnabled: false,
+    swipeEnabled: true,
   }
 );
